@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1118"/>
+      <stop offset="1" stop-color="#101c26"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#2dd4bf" fill-opacity="0.12"/>
+    </pattern>
+    <clipPath id="card"><rect width="960" height="260" rx="18"/></clipPath>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+      .name { font-size: 44px; font-weight: 700; fill: #e6edf3; }
+      .tag  { font-size: 17px; fill: #2dd4bf; }
+      .chip { font-size: 13px; fill: #9aa7b4; }
+      .code { font-size: 34px; font-weight: 700; fill: #fbbf24; letter-spacing: 3px; }
+      .lbl  { font-size: 11px; fill: #7d8590; letter-spacing: 2px; }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .scan { animation: scan 6s linear infinite; }
+      @keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(300px); } }
+      .ring { stroke-dasharray: 220; animation: count 6s linear infinite; }
+      @keyframes count { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 220; } }
+      .c { opacity: 0; animation: show 18s steps(1) infinite; }
+      .c2 { animation-delay: 6s; } .c3 { animation-delay: 12s; }
+      @keyframes show { 0% { opacity: 1; } 33.33% { opacity: 0; } }
+      .glow { animation: glow 3s ease-in-out infinite; }
+      @keyframes glow { 50% { opacity: 0.45; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="960" height="260" fill="url(#bg)"/>
+    <rect width="960" height="260" fill="url(#dots)"/>
+    <rect class="scan" x="0" y="0" width="960" height="40" fill="#2dd4bf" fill-opacity="0.04"/>
+    <rect x="0" y="0" width="960" height="4" fill="url(#acc)"/>
+
+    <!-- escudo con llave -->
+    <g transform="translate(58 62)">
+      <path class="glow" d="M60 0 L116 22 V70 C116 106 92 128 60 140 C28 128 4 106 4 70 V22 Z" fill="none" stroke="#2dd4bf" stroke-width="3"/>
+      <path d="M60 14 L104 31 V70 C104 98 86 116 60 126 C34 116 16 98 16 70 V31 Z" fill="#2dd4bf" fill-opacity="0.07"/>
+      <circle cx="60" cy="56" r="16" fill="none" stroke="#fbbf24" stroke-width="5"/>
+      <path d="M60 72 V108 M60 92 H72 M60 102 H70" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <text class="mono name" x="212" y="104">Sebastian Castellanos</text>
+    <text class="mono tag" x="214" y="142">&gt; seguridad como requisito, no como añadido<tspan class="cursor">_</tspan></text>
+    <text class="mono chip" x="214" y="186">kotlin · go · python · android · appsec · agentes de IA</text>
+    <text class="mono chip" x="214" y="210" fill-opacity="0.7">bogotá, colombia</text>
+
+    <!-- código TOTP con cuenta regresiva, guiño a Llavero -->
+    <g transform="translate(790 70)">
+      <text class="mono lbl" x="0" y="0" text-anchor="middle">LLAVERO · TOTP</text>
+      <circle cx="0" cy="62" r="35" fill="none" stroke="#2dd4bf" stroke-opacity="0.15" stroke-width="5"/>
+      <circle class="ring" cx="0" cy="62" r="35" fill="none" stroke="#2dd4bf" stroke-width="5" stroke-linecap="round" transform="rotate(-90 0 62)"/>
+      <text class="mono code c c1" x="0" y="140" text-anchor="middle">482 913</text>
+      <text class="mono code c c2" x="0" y="140" text-anchor="middle">067 245</text>
+      <text class="mono code c c3" x="0" y="140" text-anchor="middle">731 580</text>
+      <text class="mono lbl" x="0" y="67" text-anchor="middle">2FA</text>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="959" height="259" rx="18" fill="none" stroke="#2dd4bf" stroke-opacity="0.25"/>
+</svg>
