@@ -117,10 +117,10 @@
 
 <div align="center">
 
-<a href="https://www.linkedin.com/in/TU-USUARIO/">
+<a href="https://www.linkedin.com/in/sebastiancastellanosm/">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>&nbsp;&nbsp;
-<a href="mailto:TU-CORREO">
+<a href="mailto:js.caste@outlook.com">
   <img src="https://img.shields.io/badge/Correo-Escr%C3%ADbeme-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Correo">
 </a>&nbsp;&nbsp;
 <a href="https://github.com/SebastianCastellanos123">
